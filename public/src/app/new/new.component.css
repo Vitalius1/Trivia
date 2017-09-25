@@ -1,0 +1,25 @@
+.errors{
+    color:red;
+    font-size: 1.3em;
+}
+input, label, textarea{
+    font-size: 1.3em;
+}
+label{
+    display: inline-block;
+    width: 100%;
+    margin: 1%;
+}
+input, textarea{
+    float: right;
+    width: 80%
+}
+button{
+    font-size: 1.3em;
+}
+#cancel{
+    margin: 1% 2% 0 79.5%;
+}
+#add{
+    width: 10%
+}

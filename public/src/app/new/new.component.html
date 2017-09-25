@@ -1,0 +1,30 @@
+<h4><a [routerLink]="['','dashboard']">Home</a> | <a [routerLink]="['new_question']">Add a question</a> | <a href="#">Logout</a></h4>
+
+<h1>New Question</h1>
+
+<form #f='ngForm' (submit)="onSubmit()">
+
+  <label for="question">Question: <textarea name="question" rows="3" required minlength="15" [(ngModel)]='question.question' #q='ngModel'></textarea></label><br>
+  <div class="errors" *ngIf="q.invalid && (q.dirty || q.touched)">
+    <div class="errors" *ngIf="q?.errors.required">Question is required.</div>
+    <div class="errors" *ngIf="q?.errors.minlength">Question should be at least 15 characters long.</div>
+  </div>
+
+  <label for="correct">Correct Answer: <input type="text" name="correct" required [(ngModel)]='question.correct' #correct='ngModel'></label><br>
+  <div class="errors" *ngIf="correct.invalid && (correct.dirty || correct.touched)">
+    <div class="errors" *ngIf="correct?.errors.required">Correct answer is required.</div>
+  </div>
+
+  <label for="fake1">Fake Answer 1: <input type="text" name="fake1" required [(ngModel)]='question.fake1' #fake1='ngModel'></label><br>
+  <div class="errors" *ngIf="fake1.invalid && (fake1.dirty || fake1.touched)">
+    <div class="errors" *ngIf="fake1?.errors.required">Fake Ansewr 1 is required.</div>
+  </div>
+
+  <label for="fake1">Fake Answer 2: <input type="text" name="fake1" required [(ngModel)]='question.fake2' #fake2='ngModel'></label><br>
+  <div class="errors" *ngIf="fake2.invalid && (fake2.dirty || fake2.touched)">
+    <div class="errors" *ngIf="fake2?.errors.required">Fake Answer 2 is required.</div>
+  </div>
+
+  <button id="cancel" (click)="cancel()">Cancel</button><button id="add" type="submit" [disabled]='f.invalid'>Add</button>
+
+</form>

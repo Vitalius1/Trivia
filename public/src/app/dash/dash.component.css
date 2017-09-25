@@ -1,0 +1,15 @@
+#play{
+    width: 40%;
+    height: 50px;
+    background-color: grey;
+    margin: 5% auto;
+    text-align: center;
+    padding: 5%
+}
+button{
+    color: whitesmoke;
+    background-color: blue;
+    font-size: 1.3em;
+    width: 40%;
+
+}
