@@ -40,26 +40,18 @@ export class TriviaComponent implements OnInit {
   onSubmit(){
     console.log("submiting answers")
     let correct = 0;
-    let wrong = 0;
-    if(this.q1.a === "correct"){
+    if(this.q1.a === "1"){
       correct += 1;
-    } else {
-      wrong += 1
     }
-    if(this.q2.a === "correct"){
+    if(this.q2.a === "1"){
       correct += 1;
-    } else {
-      wrong += 1
     }
-    if(this.q3.a === "correct"){
+    if(this.q3.a === "1"){
       correct += 1;
-    } else {
-      wrong += 1
     }
     let game = {
       user: this.user_name,
       correct: correct,
-      wrong: wrong
     }
     this._gameService.newGame(game);
     this._router.navigate(['dashboard']);

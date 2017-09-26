@@ -6,5 +6,4 @@ export class UserService {
 user_name = "";
 userObserver = new BehaviorSubject(this.user_name);
   constructor() { }
-
 }
