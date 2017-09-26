@@ -5,7 +5,7 @@ module.exports = {
     createQ: function (req, res) {
         Question.create(req.body, (err, question) => {
             if (err) {
-                console.log("ERROROROROR", err);
+                console.log("creation ERROR", err);
                 res.json(err);
             } else {
                 console.log("question CREATED");
@@ -14,13 +14,13 @@ module.exports = {
 
         });
     },
-    getAllQ: function (req, res) {
-        Question.find({}, function (err, questions) {
+    getRandomQ: function (req, res) {
+        Question.findRandom({},{},{limit: 3}, function (err, questions) {
             if (err) {
                 console.log('something went wrong with getting all', err);
                 res.json(err);
             } else {
-                console.log('successfully found all bikes!');
+                console.log('successfully got 3 random questions!');
                 res.json(questions);
             }
         });

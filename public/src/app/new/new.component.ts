@@ -10,6 +10,7 @@ import { QuestionService } from '../question.service';
 })
 export class NewComponent implements OnInit {
   question: Question = new Question();
+  
   constructor(private _router: Router, private _questionService: QuestionService) { }
 
   ngOnInit() {
