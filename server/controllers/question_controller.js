@@ -9,10 +9,7 @@ module.exports = {
                 res.json(err);
             } else {
                 console.log("question CREATED");
-                Question.find({}, function (err, questions) {
-                    console.log("Sendind all questions after adding one");
-                    res.json(questions);
-                });
+                res.json(question);
             }
 
         });
