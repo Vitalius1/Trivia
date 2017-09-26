@@ -29,24 +29,25 @@ export class TriviaComponent implements OnInit {
     this._questionService.questionsObserver.subscribe(questions => {
       this.questions = questions;
     })
-
+    if (this.questions.length < 1) {
+      this._router.navigate(['dashboard'])
+    }
   }
 
   ngOnInit() {
     console.log("initiated game page with user: ", this.user_name);
-    console.log(this.questions, "+++++++");
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log("submiting answers")
     let correct = 0;
-    if(this.q1.a === "1"){
+    if (this.q1.a === "1") {
       correct += 1;
     }
-    if(this.q2.a === "1"){
+    if (this.q2.a === "1") {
       correct += 1;
     }
-    if(this.q3.a === "1"){
+    if (this.q3.a === "1") {
       correct += 1;
     }
     let game = {
