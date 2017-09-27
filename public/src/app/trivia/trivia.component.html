@@ -7,7 +7,7 @@
     <label for="q1">1. {{questions[0].question}}</label><br>
     <input type="radio" required name="q1" [(ngModel)]="q1.a" #a1='ngModel' value="1">{{questions[0].correct}}<br>
     <input type="radio" required name="q1" [(ngModel)]="q1.a" #a1='ngModel' value="0">{{questions[0].fake1}}<br>
-    <input type="radio" required name="q1" [(ngModel)]="q1.a" #a1='ngModel' value="0">{{questions[0].fake2}}<br>
+    <input type="radio" required name="q1" [(ngModel)]="q1.a" #a1='ngModel' value="2">{{questions[0].fake2}}<br>
   </div>
   <div class="errors" *ngIf="a1.invalid && a1.touched">
     <div class="errors" *ngIf="a1?.errors.required">Choose an answer</div>
@@ -16,7 +16,7 @@
     <label for="q1">2. {{questions[1].question}}</label><br>
     <input type="radio" required name="q2" [(ngModel)]="q2.a" #a2='ngModel' value="1">{{questions[1].correct}}<br>
     <input type="radio" required name="q2" [(ngModel)]="q2.a" #a2='ngModel' value="0">{{questions[1].fake1}}<br>
-    <input type="radio" required name="q2" [(ngModel)]="q2.a" #a2='ngModel' value="0">{{questions[1].fake2}}<br>
+    <input type="radio" required name="q2" [(ngModel)]="q2.a" #a2='ngModel' value="2">{{questions[1].fake2}}<br>
   </div>
   <div class="errors" *ngIf="a1.invalid && a1.touched">
     <div class="errors" *ngIf="a1?.errors.required">Choose an answer</div>
@@ -25,7 +25,7 @@
     <label for="q1">3. {{questions[2].question}}</label><br>
     <input type="radio" required name="q3" [(ngModel)]="q3.a" #a3='ngModel' value="1">{{questions[2].correct}}<br>
     <input type="radio" required name="q3" [(ngModel)]="q3.a" #a3='ngModel' value="0">{{questions[2].fake1}}<br>
-    <input type="radio" required name="q3" [(ngModel)]="q3.a" #a3='ngModel' value="0">{{questions[2].fake2}}<br>
+    <input type="radio" required name="q3" [(ngModel)]="q3.a" #a3='ngModel' value="2">{{questions[2].fake2}}<br>
   </div>
   <div class="errors" *ngIf="a1.invalid && a1.touched">
     <div class="errors" *ngIf="a1?.errors.required">Choose an answer</div>

@@ -15,7 +15,7 @@
       <tr *ngFor="let g of games">
         <td>{{ g.user }}</td>
         <td>{{ g.correct }}/3</td>
-        <td>{{ (g.correct / 3) * 100 | number: '1.2-2' }}%</td>
+        <td>{{ (g.correct / 3) | percent: '1.2-2' }}</td>
       </tr>
     </tbody>
   </table>
