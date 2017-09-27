@@ -5,8 +5,17 @@
     <h4>Click the button above to start the trivia game.</h4>
   </div>
 
-
-
-
-  <h1>Games HERE</h1>
-  {{games | json}}
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Score</th>
+      <th>Percentage</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let g of games">
+        <td>{{ g.user }}</td>
+        <td>{{ g.correct }}/3</td>
+        <td>{{ (g.correct / 3) * 100 | number: '1.2-2' }}%</td>
+      </tr>
+    </tbody>
+  </table>
