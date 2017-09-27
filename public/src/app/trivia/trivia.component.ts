@@ -55,7 +55,6 @@ export class TriviaComponent implements OnInit {
       correct: correct,
     }
     this._gameService.newGame(game);
-    this._router.navigate(['dashboard']);
   }
 
 }
